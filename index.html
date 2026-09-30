@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IN FRONTIER — Raqamli yechimlar</title>
+<meta name="description" content="IN FRONTIER — biznes, ta'lim va tashkilotlar uchun sayt, CRM, Telegram bot, SMM, avtomatlashtirish, dizayn va raqamli yechimlar.">
+<style>
+:root{--b:#2563eb;--b2:#0ea5e9;--d:#07111f;--t:#142033;--m:#64748b;--bg:#f5f8fc;--w:#fff;--line:#e3eaf3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--t);line-height:1.6}a{text-decoration:none;color:inherit}.container{max-width:1200px;margin:auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:#ffffffeb;backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:950;font-size:23px;letter-spacing:2px}.brand span{color:var(--b)}.links{display:flex;gap:25px;color:#526174;font-size:14px}.navbtn{padding:11px 18px;border-radius:10px;background:var(--d);color:#fff;font-weight:800}
+.hero{padding:100px 0 85px;background:radial-gradient(circle at 80% 30%,#dbeafe 0,#eef6ff 25%,#fff 60%)}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:70px;align-items:center}.ey{display:inline-block;color:#1d4ed8;background:#e7f0ff;padding:7px 12px;border-radius:30px;font-size:11px;font-weight:900;letter-spacing:1.3px}.hero h1{font-size:67px;line-height:.98;letter-spacing:-4px;margin:20px 0}.hero h1 span{color:var(--b)}.hero p{font-size:19px;color:var(--m);max-width:680px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;justify-content:center;align-items:center;padding:14px 21px;border-radius:11px;background:var(--b);color:#fff;font-weight:850;border:0;cursor:pointer}.btn.alt{background:#fff;color:var(--t);border:1px solid #cbd7e5}.hero-card{background:var(--d);color:#fff;border-radius:28px;padding:18px;box-shadow:0 30px 80px #0b122030}.hero-screen{border-radius:20px;padding:35px;background:linear-gradient(145deg,#2563eb,#0891b2);min-height:390px;display:flex;flex-direction:column;justify-content:flex-end}.hero-screen h2{font-size:42px;line-height:1.03;margin:10px 0}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:22px}.mini-grid div{background:#ffffff18;border:1px solid #ffffff25;padding:10px;border-radius:9px;font-size:12px}
+section{padding:90px 0}.section-head{max-width:760px;margin-bottom:45px}.center{text-align:center;margin-left:auto;margin-right:auto}.section-head h2{font-size:43px;line-height:1.08;letter-spacing:-1.5px;margin:10px 0}.section-head p{color:var(--m);font-size:17px}.service{display:grid;grid-template-columns:80px 1fr 1fr;gap:30px;padding:38px 0;border-top:1px solid var(--line);align-items:start}.service:first-child{border-top:0}.num{font-size:28px;color:#94a3b8;font-weight:900}.service h3{font-size:27px;margin:0 0 8px}.service .intro{color:var(--m);font-size:15px}.details{display:grid;gap:14px}.detail{background:#fff;border:1px solid var(--line);padding:17px;border-radius:13px}.detail b{display:block;margin-bottom:4px}.detail span{font-size:13px;color:var(--m)}
+.dark{background:var(--d);color:#fff}.dark .section-head p{color:#aebaca}.audience{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.aud{border:1px solid #263449;border-radius:17px;padding:24px;background:#ffffff05}.aud h3{margin:8px 0}.aud p{color:#aebaca;font-size:14px}.aud strong{color:#60a5fa}
+.process{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}.step strong{color:var(--b);font-size:12px}.step h3{margin:8px 0}.step p{color:var(--m);font-size:13px}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:15px}.faq div{background:#fff;border:1px solid var(--line);padding:21px;border-radius:14px}.faq b{display:block;margin-bottom:7px}.faq span{color:var(--m);font-size:14px}
+.cta{background:linear-gradient(135deg,#2563eb,#0f6bd8);color:#fff;border-radius:28px;padding:55px}.cta-grid{display:grid;grid-template-columns:1fr .8fr;gap:35px;align-items:center}.cta h2{font-size:43px;line-height:1.08}.cta p{color:#dbeafe}.form{background:#fff;border-radius:17px;padding:21px}.form input,.form textarea{width:100%;padding:13px;border:1px solid #d8e1ec;border-radius:9px;margin:5px 0 9px;font:inherit}.form textarea{height:90px}.form .btn{width:100%}
+footer{background:#050b14;color:#9eabba;padding:35px 0}.foot{display:flex;justify-content:space-between;gap:20px;font-size:13px}.foot b{color:#fff}
+@media(max-width:900px){.hero-grid,.cta-grid{grid-template-columns:1fr}.links{display:none}.service{grid-template-columns:55px 1fr}.service .details{grid-column:2}.audience{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.faq{grid-template-columns:1fr}.hero h1{font-size:52px}}
+@media(max-width:560px){.hero{padding-top:60px}.hero h1{font-size:42px}.section-head h2{font-size:33px}.service{grid-template-columns:1fr}.service .details{grid-column:1}.audience,.process{grid-template-columns:1fr}.cta{padding:30px 20px}.cta h2{font-size:33px}.foot{flex-direction:column}}
+</style>
+
+<style>
+.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+.service-card{padding:24px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:rgba(255,255,255,.035)}
+.service-card h3{margin:0 0 12px;font-size:19px}.service-card p{line-height:1.65;color:#b9c2d0}.service-card b{display:block;margin-top:10px}
+.contact-box{margin-top:55px;padding:32px;border-radius:26px;background:linear-gradient(135deg,rgba(40,120,255,.14),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.1)}
+.lead-form{display:grid;gap:15px;margin-top:25px}.lead-form label{display:grid;gap:8px;font-weight:600}
+.lead-form input,.lead-form select,.lead-form textarea{width:100%;box-sizing:border-box;padding:14px 16px;border-radius:13px;border:1px solid rgba(255,255,255,.13);background:rgba(0,0,0,.18);color:inherit}
+.form-status{min-height:20px;color:#9ec5ff}
+@media(max-width:900px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.service-grid{grid-template-columns:1fr}.contact-box{padding:22px}}
+</style>
+
+</head>
+<body>
+
+<nav><div class="container nav"><a class="brand" href="#">IN <span>FRONTIER</span></a><div class="links"><a href="#xizmatlar">Xizmatlar</a><a href="#kimga">Kim uchun</a><a href="#jarayon">Jarayon</a><a href="#savol">Savollar</a></div><a class="navbtn" href="#aloqa">Loyiha boshlash</a></div></nav>
+
+<header class="hero"><div class="container hero-grid">
+<div><span class="ey">RAQAMLI YECHIMLAR • BIZNES • TA’LIM</span>
+<h1>Biznesingizni <span>raqamli darajaga</span> olib chiqamiz.</h1>
+<p>IN FRONTIER — kompaniyalar, ta’lim muassasalari va tadbirkorlar uchun sayt, landing page, Telegram bot, CRM, SMM, avtomatlashtirish, dizayn va raqamli tizimlarni ishlab chiqadigan xizmatlar markazi.</p>
+<div class="actions"><a class="btn" href="#aloqa">Loyihamni muhokama qilish →</a><a class="btn alt" href="#xizmatlar">Xizmatlarni batafsil ko‘rish</a></div>
+</div>
+<div class="hero-card"><div class="hero-screen"><small>IN FRONTIER</small><h2>G‘oya → Tizim → Natija.</h2><div class="mini-grid"><div>🌐 Web</div><div>🤖 Bot</div><div>⚙️ CRM</div><div>📱 SMM</div><div>🎨 Design</div><div>📊 Automation</div></div></div></div>
+</div></header>
+
+<section id="xizmatlar"><div class="container"><div class="section-head"><span class="ey">01 — XIZMATLAR</span><h2>Har bir xizmat nimani hal qiladi?</h2><p>Biz faqat “sayt” yoki “bot” yasamaymiz. Har bir xizmat biznesingizdagi aniq muammoni hal qilish uchun ishlatiladi.</p></div>
+
+<div class="service"><div class="num">01</div><div><h3>Landing Page</h3><p class="intro">Bitta mahsulot, xizmat yoki kampaniyani sotishga mo‘ljallangan professional sahifa.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Universitet, texnikum, bog‘cha, klinika, avtosalon, qurilish, xizmat ko‘rsatuvchi biznes va reklama orqali mijoz oladiganlar.</span></div><div class="detail"><b>Nima beradi?</b><span>Reklamadan kelgan odamga aniq taklifni ko‘rsatadi va uni ariza, qo‘ng‘iroq yoki Telegram murojaatiga olib keladi.</span></div></div></div>
+
+<div class="service"><div class="num">02</div><div><h3>Korporativ va biznes sayt</h3><p class="intro">Kompaniyaning xizmatlari, mahsulotlari, jamoasi va aloqa kanallarini professional ko‘rsatadigan sayt.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Kompaniyalar, ishlab chiqaruvchilar, ta’lim tashkilotlari, klinikalar, mehmonxonalar, xizmat ko‘rsatuvchi tashkilotlar.</span></div><div class="detail"><b>Nima beradi?</b><span>Ishonch, professional imidj, Google orqali topilish imkoniyati va mijoz uchun barcha ma’lumotni bir joyga jamlash.</span></div></div></div>
+
+<div class="service"><div class="num">03</div><div><h3>Telegram Bot</h3><p class="intro">Mijoz bilan 24/7 ishlaydigan avtomatik yordamchi va ariza yig‘ish tizimi.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Universitet, texnikum, o‘quv markazi, klinika, bog‘cha, restoran, online do‘kon va xizmat ko‘rsatuvchi bizneslarga.</span></div><div class="detail"><b>Nima qiladi?</b><span>Ariza oladi, savollarga javob beradi, ro‘yxatdan o‘tkazadi, buyurtma qabul qiladi, administratorga xabar yuboradi va kerak bo‘lsa CRMga ma’lumot uzatadi.</span></div></div></div>
+
+<div class="service"><div class="num">04</div><div><h3>CRM va ichki boshqaruv tizimi</h3><p class="intro">Mijozlar, arizalar, xodimlar, savdo va jarayonlarni bitta paneldan boshqarish.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Mijozlari ko‘p bo‘lgan kompaniyalar, universitetlar, texnikumlar, klinikalar, savdo va xizmat bizneslari.</span></div><div class="detail"><b>Nima beradi?</b><span>Kim murojaat qilgani, kimga javob berilgani, sotuv bosqichi va keyingi harakatlarni nazorat qilish imkonini beradi.</span></div></div></div>
+
+<div class="service"><div class="num">05</div><div><h3>SMM va Reels</h3><p class="intro">Instagram va Telegram orqali brendni ko‘rsatish va auditoriyadan murojaat olish tizimi.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Ta’lim, tibbiyot, restoran, avtosalon, go‘zallik, savdo, xizmat va shaxsiy brendlar.</span></div><div class="detail"><b>Nimalar qilinadi?</b><span>Kontent strategiya, postlar, Reels g‘oyalari, ssenariylar, dizayn yo‘nalishi, aksiya va reklama funnel.</span></div></div></div>
+
+<div class="service"><div class="num">06</div><div><h3>Reklama va Lead Generation</h3><p class="intro">Reklama orqali potensial mijozlarni topish va ularni murojaatga aylantirish.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Yangi mijozga doimiy ehtiyoji bor bizneslarga: ta’lim, klinika, ko‘chmas mulk, avtosalon, xizmat va savdo.</span></div><div class="detail"><b>Yondashuv</b><span>Reklama → landing → forma/bot → operator/CRM zanjiri orqali lead oqimini tashkil qilish.</span></div></div></div>
+
+<div class="service"><div class="num">07</div><div><h3>Ta’lim platformalari</h3><p class="intro">Online kurs, test, sertifikat, talaba va o‘qituvchi boshqaruviga ega ta’lim tizimlari.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Universitetlar, texnikumlar, o‘quv markazlari va online kurs sotuvchilarga.</span></div><div class="detail"><b>Funksiyalar</b><span>Login, kurslar, testlar, progress, sertifikat, to‘lovga tayyor arxitektura, admin va o‘qituvchi panellari.</span></div></div></div>
+
+<div class="service"><div class="num">08</div><div><h3>Davomat, talaba va xodim tizimlari</h3><p class="intro">Ta’lim muassasalaridagi kundalik jarayonlarni raqamlashtirish.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Universitet, texnikum, o‘quv markazi va katta jamoaga ega tashkilotlarga.</span></div><div class="detail"><b>Misollar</b><span>QR davomat, o‘qituvchi paneli, talaba kabineti, guruhlar, hisobot, Telegram bildirishnomalari va admin panel.</span></div></div></div>
+
+<div class="service"><div class="num">09</div><div><h3>Excel & Google Sheets avtomatlashtirish</h3><p class="intro">Qo‘lda bajariladigan hisob-kitob va hisobotlarni avtomatiklashtirish.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Ta’lim muassasalari, HR, savdo, ombor, moliya va kundalik hisobot yuritadigan tashkilotlarga.</span></div><div class="detail"><b>Natija</b><span>Formulalar, filtrlar, hisobotlar, davomat va avtomatik hisoblar orqali vaqtni tejash.</span></div></div></div>
+
+<div class="service"><div class="num">10</div><div><h3>Grafik dizayn va prezentatsiya</h3><p class="intro">Brendni professional ko‘rsatadigan vizual materiallar.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Biznes, ta’lim muassasasi, tadbir tashkilotchilari, shaxsiy brend va SMM sahifalariga.</span></div><div class="detail"><b>Nimalar?</b><span>Logo, banner, reklama, sertifikat, katalog, prezentatsiya, ijtimoiy tarmoq postlari va boshqa vizual materiallar.</span></div></div></div>
+
+<div class="service"><div class="num">11</div><div><h3>Akademik xizmatlar</h3><p class="intro">Talaba va o‘quvchilar uchun o‘quv materiallarini professional tayyorlash.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Talabalar, o‘qituvchilar va ta’lim tashkilotlariga.</span></div><div class="detail"><b>Xizmatlar</b><span>Prezentatsiya, referat, mustaqil ish, kurs ishi, amaliyot hisoboti, tezis va boshqa o‘quv materiallarini tayyorlash/tahrirlash.</span></div></div></div>
+
+<div class="service"><div class="num">12</div><div><h3>API va integratsiya</h3><p class="intro">Turli tizimlarni bir-biri bilan bog‘lash.</p></div><div class="details"><div class="detail"><b>Kimga kerak?</b><span>Bir nechta dastur yoki platformadan foydalanadigan bizneslarga.</span></div><div class="detail"><b>Misollar</b><span>Sayt → Telegram, forma → CRM, Google Sheets → bot, to‘lov → kabinet kabi avtomatik ma’lumot almashinuvi.</span></div></div></div>
+</div></section>
+
+<section class="dark" id="kimga"><div class="container"><div class="section-head"><span class="ey">02 — KIMLAR UCHUN?</span><h2>IN FRONTIER kimga qanday yordam beradi?</h2><p>Har bir soha uchun xizmatlar kombinatsiyasi boshqacha bo‘ladi.</p></div><div class="audience">
+<div class="aud"><strong>01</strong><h3>Universitet</h3><p>Qabul CRM, landing, Telegram bot, reklama, student kabineti, davomat va ta’lim platformasi.</p></div>
+<div class="aud"><strong>02</strong><h3>Texnikum</h3><p>Qabul, guruh, davomat, kontrakt, talaba kabineti, Telegram bildirishnomalari va sayt.</p></div>
+<div class="aud"><strong>03</strong><h3>Bog‘cha</h3><p>Instagram, reklama, ota-onalar bilan Telegram aloqa, davomat va to‘lov nazorati.</p></div>
+<div class="aud"><strong>04</strong><h3>Klinika</h3><p>Online qabul, shifokor sahifalari, SMM, reklama, Telegram bot va mijoz CRM.</p></div>
+<div class="aud"><strong>05</strong><h3>Avtosalon</h3><p>Avtomobil katalogi, lead landing, reklama, CRM va sotuvchilar uchun lead taqsimoti.</p></div>
+<div class="aud"><strong>06</strong><h3>O‘quv markazi</h3><p>Kurslar, online ariza, Telegram bot, davomat, to‘lov va CRM.</p></div>
+<div class="aud"><strong>07</strong><h3>Biznes kompaniya</h3><p>Korporativ sayt, B2B lead generation, katalog, CRM va avtomatlashtirish.</p></div>
+<div class="aud"><strong>08</strong><h3>Online do‘kon</h3><p>Katalog, buyurtma formasi, Telegram bot, CRM va reklama funnel.</p></div>
+<div class="aud"><strong>09</strong><h3>Shaxsiy brend</h3><p>Landing, portfolio, kontent strategiya, SMM va professional vizual identika.</p></div>
+</div></div></section>
+
+<section id="jarayon"><div class="container"><div class="section-head center"><span class="ey">03 — JARAYON</span><h2>G‘oyadan tayyor tizimgacha</h2><p>Har bir loyiha vazifaga qarab alohida rejalashtiriladi.</p></div><div class="process">
+<div class="step"><strong>01</strong><h3>Murojaat</h3><p>Vazifangizni yozasiz yoki qo‘ng‘iroq qilasiz.</p></div>
+<div class="step"><strong>02</strong><h3>Tahlil</h3><p>Maqsad, auditoriya, funksiyalar va mavjud tizimlar o‘rganiladi.</p></div>
+<div class="step"><strong>03</strong><h3>Taklif</h3><p>Sizga mos xizmatlar va loyiha tarkibi belgilanadi.</p></div>
+<div class="step"><strong>04</strong><h3>Ishlab chiqish</h3><p>Dizayn, kod, kontent va integratsiyalar bajariladi.</p></div>
+<div class="step"><strong>05</strong><h3>Ishga tushirish</h3><p>Sinov, topshirish va keyingi texnik yordam.</p></div>
+</div></div></section>
+
+<section id="savol" style="background:#eef4fb"><div class="container"><div class="section-head center"><span class="ey">04 — SAVOLLAR</span><h2>Ko‘p beriladigan savollar</h2></div><div class="faq">
+<div><b>Faqat sayt yasaysizlarmi?</b><span>Yo‘q. Sayt bilan birga bot, CRM, SMM, reklama va avtomatlashtirishni ham bir tizimga birlashtirish mumkin.</span></div>
+<div><b>Narx qanday belgilanadi?</b><span>Loyiha funksiyalari, sahifalar soni, integratsiya va murakkabligiga qarab individual hisoblanadi.</span></div>
+<div><b>Tayyor saytni keyin o‘zgartirish mumkinmi?</b><span>Ha. Keyinchalik yangi sahifa, xizmat, forma, bot yoki boshqa funksiya qo‘shish mumkin.</span></div>
+<div><b>Telegram bot mavjud saytga ulanadimi?</b><span>Ha. Zarur API yoki integratsiya imkoniyati bo‘lsa sayt, bot, CRM va boshqa tizimlar bog‘lanadi.</span></div>
+<div><b>Faqat O‘zbekistondagi bizneslar bilan ishlaysizmi?</b><span>Yo‘q. Masofadan turib boshqa hududlardagi mijozlar uchun ham raqamli loyihalar tayyorlash mumkin.</span></div>
+<div><b>Boshlash uchun nima kerak?</b><span>Biznesingiz, maqsadingiz va sizga kerak bo‘lgan vazifani aytishingiz kifoya. Qolgan texnik qismini birga aniqlaymiz.</span></div>
+</div></div></section>
+
+<section id="aloqa"><div class="container"><div class="cta"><div class="cta-grid"><div><span class="ey" style="color:#bfdbfe">05 — ALOQA</span><h2>Loyihangizni IN FRONTIER bilan boshlang.</h2><p>Qaysi xizmat kerakligini yozing. Sizning vazifangizga mos yechimni birgalikda aniqlaymiz.</p><p><b>Telegram:</b> @in_frontier<br><b>Telefon:</b> </p></div><form class="form" onsubmit="send(event)"><input id="name" required placeholder="Ismingiz / kompaniya nomi"><input id="phone" required placeholder="Telefon raqamingiz"><textarea id="msg" placeholder="Loyiha yoki kerakli xizmat haqida yozing"></textarea><button class="btn" type="submit">Telegram orqali yuborish →</button><small id="status" style="display:block;color:#64748b;margin-top:9px"></small></form></div></div></div></section>
+
+<footer><div class="container foot"><div><b>IN FRONTIER</b> — raqamli kelajak sari.</div><div>© 2026 IN FRONTIER</div></div></footer>
+<script>
+function send(e){e.preventDefault();const text=encodeURIComponent("IN FRONTIER yangi murojaat\n\nKompaniya/ism: "+name.value+"\nTelefon: "+phone.value+"\nXizmat: "+msg.value);status.textContent="Telegram ochilmoqda...";window.open("https://t.me/your_username?text="+text,"_blank")}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("leadForm");
+  const status = document.getElementById("formStatus");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const name = data.get("name") || "";
+    const telegram = data.get("telegram") || "";
+    const service = data.get("service") || "";
+    const message = data.get("message") || "";
+
+    const text =
+      "IN FRONTIER — yangi murojaat%0A%0A" +
+      "👤 Ism: " + encodeURIComponent(name) + "%0A" +
+      "💬 Telegram: " + encodeURIComponent(telegram) + "%0A" +
+      "🛠 Xizmat: " + encodeURIComponent(service) + "%0A" +
+      "📝 Loyiha: " + encodeURIComponent(message);
+
+    status.innerHTML = 'Telegram ochilmoqda...';
+    window.open("https://t.me/in_frontier?text=" + text, "_blank");
+  });
+});
+</script>
+
+</body></html>
